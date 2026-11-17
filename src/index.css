@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Editorial Paper & Crimson Ledger Palette */
+  --color-butter-white: #FAF8F5;        /* Warm paper canvas (60%) */
+  --color-butter-cream: #FFFFFF;        /* Crisp card surface (30%) */
+  --color-butter-gold: #E6E0D6;         /* Subtle warm hairline border */
+  --color-royal-purple: #D92D20;        /* Editorial Crimson accent (10%) */
+  --color-royal-purple-light: #F04438;  /* Bright Crimson hover/highlight */
+  --color-royal-purple-hover: #B42318;  /* Deep Crimson pressed */
+  --color-royal-purple-soft: #F4EFE6;   /* Soft warm neutral surface */
+
+  /* Neutral Ink Shades */
+  --color-charcoal: #181615;            /* Primary editorial ink */
+  --color-slate-muted: #665E57;         /* Secondary warm ink */
+}
+
+/* Single-level editorial surface */
+.editorial-surface {
+  background-color: #FFFFFF;
+  border: 1px solid #E6E0D6;
+  box-shadow: 0 1px 2px rgba(24, 22, 21, 0.03);
+  transition: border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.editorial-surface:hover {
+  border-color: #D5CCC0;
+  box-shadow: 0 6px 20px rgba(24, 22, 21, 0.05);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-butter-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D1C7;
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #BFB6AA;
+}
+
+/* Custom shake animation for inline validation */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

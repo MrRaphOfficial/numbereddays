@@ -1,0 +1,6 @@
+{
+  "name": "Numbered Days",
+  "description": "A highly polished, Pinterest-inspired age and timeline bento ledger keep track of your numbered days, featuring a strict, highly demanding 'Dads Expectation' chatbot who audits your life achievements, comparisons, and remaining time.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
